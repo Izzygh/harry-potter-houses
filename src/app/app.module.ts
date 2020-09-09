@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HousesComponent } from './houses/houses.component';
-import { HouseEditorComponent } from './house-editor/house-editor.component';
-import { HouseListComponent } from './house-list/house-list.component';
-import { BannerComponent } from './banner/banner.component';
+import { HouseEditorComponent } from './components/house-editor/house-editor.component';
+import { HouseListComponent } from './components/house-list/house-list.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
