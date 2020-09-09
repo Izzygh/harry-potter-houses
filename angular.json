@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Harry-Potter-Houses"
+    }
+  },
+  "defaultProject": "Harry-Potter-Houses",
+  "cli": {
+    "analytics": false
+  }
 }

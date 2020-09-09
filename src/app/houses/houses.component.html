@@ -1,0 +1,41 @@
+<div class="container columns">
+    <div class="column is-half">
+        <h2 class="subtitle">Houses</h2>
+        <ul class="houses">
+            <li *ngFor="let house of houses" 
+                [class.selected]="house === selectedHouse" 
+                class="box media">
+
+            <button
+                [ngClass]="{'is-success' : house === selectedHouse}"
+                (click)="onSelect(house)"
+                class="button is-small media-left"
+            >
+                {{ house.name }}</button>
+                
+                <span
+                class="media-content">
+                Head: {{ house.head }}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="column box" 
+            class="subtitle is-5">Edit the Houses
+    <div
+        *ngIf="selectedHouse" 
+        class="message" 
+        [ngClass]="{
+            'is-success' : selectedHouse?.name === 'Slytherin',
+            'is-warning' : selectedHouse?.name === 'HufflePuff',
+            'is-danger' : selectedHouse?.name === 'Gryffindor',
+            'is-info' : selectedHouse?.name === 'Ravenclaw'
+            }">
+        <div class="message-header"> {{ selectedHouse?.name }}</div>
+        <div class="message-body" *ngIf="selectedHouse">
+            <p>House: {{ selectedHouse?.name }}</p>
+               <p> <label>Head:
+                    <input [(ngModel)]="selectedHouse.head" placeholder="head"/>
+                </label> </p>
+        </div>
+    </div>
+</div>
