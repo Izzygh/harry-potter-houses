@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { House } from './house';
-import { HOUSES } from './houses';
+import { House } from './model/house';
+import { HOUSES } from './data/houses';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { House } from "src/app/model/house";
 @Component({
   selector: 'app-house-editor',
   templateUrl: './house-editor.component.html',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HouseEditorComponent implements OnInit {
 
+  @Input() selectedHouse: House
+
+  
   constructor() { }
 
   ngOnInit(): void {

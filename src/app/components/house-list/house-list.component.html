@@ -1,0 +1,17 @@
+<h2 class="subtitle">Houses</h2>
+<ul class="houses">
+    <li *ngFor="let house of houses" 
+        [class.selected]="house === selectedHouse" 
+        class="box media">
+        <button
+            [ngClass]="{'is-success' : house === selectedHouse}"
+            (click)="onSelect(house)"
+            class="button is-small media-left">
+            {{ house.name }}
+        </button>      
+        <span
+            class="media-content">
+            Head: {{ house.head }}
+        </span>
+    </li>
+</ul>

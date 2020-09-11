@@ -1,4 +1,4 @@
-import { House } from './house';
+import { House } from '../model/house';
 
 export const HOUSES: House[] = [
     {name: 'Gryffindor', head: 'Minerva McGonagall'},

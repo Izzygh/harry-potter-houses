@@ -1,15 +1,7 @@
-<section class="hero is-dark is-bold is-small">
-  <div class="hero-body">
-    <div class="container level">
-<h1 class="title is-1 level-left">{{ projectTitle }}</h1>
-<figure class="image is-128x128">
-  <img src="https://bulma.io/images/placeholders/128x128.png">
-</figure>
-    </div>
+<app-banner [projectTitle]="projectTitle"></app-banner>
+  <div class="has-background-grey-lighter">
+    <app-nav-bar></app-nav-bar>
+    <router-outlet></router-outlet>
   </div>
-</section>
-<section class="section has-background-grey-lighter">
-<app-houses></app-houses>
-</section>
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
-import { House } from '../house';
-import { HOUSES } from '../houses';
-import { HousesService } from '../houses.service';
+import { House } from '../../model/house';
+import { HOUSES } from '../../data/houses';
+import { HousesService } from '../../houses.service';
 
 
 @Component({
@@ -18,15 +18,14 @@ export class HousesComponent implements OnInit {
     ngOnInit(): void {
         this.getHouses();
 
-    console.log(this.houses)
     }
 
-    getHouses(): void {
+    getHouses = (): void => {
         this.houses = this.housesService.getHouses();
     }
 
-    onSelect(house: House): void {
-        this.selectedHouse = house;
+    onSelect = ($event: House): void => {
+        this.selectedHouse = $event;
     }
 
 }
