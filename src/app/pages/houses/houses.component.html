@@ -2,7 +2,10 @@
     <div class="container">
         <div class="columns">
             <section class="column">
-                <app-house-list [houses]="houses"></app-house-list>
+                <app-house-list
+                [houses]="houses"
+                (selectEvent)="onSelect($event)">
+                </app-house-list>
             </section>
             <section class="column">
                 <app-house-editor [selectedHouse]="selectedHouse"></app-house-editor>

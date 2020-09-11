@@ -7,7 +7,8 @@ import { House } from "src/app/model/house";
 })
 export class HouseEditorComponent implements OnInit {
 
-  @Input() selectedHouse: House;
+  @Input() selectedHouse: House
+
   
   constructor() { }
 
